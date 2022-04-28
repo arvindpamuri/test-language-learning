@@ -30,14 +30,17 @@ public class TestTranslateQuiz {
     driver.get("http://ec2-54-208-51-74.compute-1.amazonaws.com:8080/language-learning/SingIn.html");
     driver.findElement(By.name("username")).click();
     driver.findElement(By.name("username")).clear();
+    Thread.sleep(3000);
     driver.findElement(By.name("username")).sendKeys("aravind");
+    Thread.sleep(2000);
     driver.findElement(By.name("password")).click();
-    Thread.sleep(1500);
+    Thread.sleep(3000);
     
     driver.findElement(By.name("password")).clear();
     driver.findElement(By.name("password")).sendKeys("pamoori");
+    Thread.sleep(3000);
     driver.findElement(By.xpath("//button[@type='submit']")).click();
-    Thread.sleep(1500);
+    Thread.sleep(3000);
 
     driver.findElement(By.id("translate")).click();
 
@@ -47,6 +50,7 @@ public class TestTranslateQuiz {
     Thread.sleep(1500);
     driver.findElement(By.id("user-text")).clear();
     driver.findElement(By.id("user-text")).sendKeys("good morning");
+    Thread.sleep(3000);
     driver.findElement(By.xpath("//button[@value='Submit']")).click();
     Thread.sleep(3000);
     

@@ -29,26 +29,30 @@ public class TestTranslate {
   public void testTranslate() throws Exception {
     driver.get("http://ec2-54-208-51-74.compute-1.amazonaws.com:8080/language-learning/SingIn.html");
     driver.findElement(By.name("username")).click();
-    Thread.sleep(1500);
+    Thread.sleep(2000);
     
     driver.findElement(By.name("username")).clear();
     driver.findElement(By.name("username")).sendKeys("aravind");
     driver.findElement(By.name("password")).click();
-    Thread.sleep(1500);
+    Thread.sleep(3000);
     
     
     driver.findElement(By.name("password")).clear();
     driver.findElement(By.name("password")).sendKeys("pamoori");
+    Thread.sleep(3000);
     driver.findElement(By.xpath("//button[@type='submit']")).click();
     Thread.sleep(1500);
     
     driver.findElement(By.id("translate")).click();
+    Thread.sleep(3000);
     driver.findElement(By.id("input-text")).click();
     driver.findElement(By.id("input-text")).clear();
-    Thread.sleep(1500);
+    Thread.sleep(3000);
     
     driver.findElement(By.id("input-text")).sendKeys("good morning");
+    Thread.sleep(3000);
     driver.findElement(By.xpath("//button[@value='Submit']")).click();
+    Thread.sleep(3000);
 //    driver.get("http://ec2-54-208-51-74.compute-1.amazonaws.com:8080/language-learning/translate?text=good+morning&lang=es&userName=aravind&userID=19");
   }
 
